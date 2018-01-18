@@ -31,7 +31,6 @@ table {
 
 body {
   margin: 40px;
-  font-family: Tahoma, Geneva, sans-serif;
 }
 
 
@@ -45,6 +44,14 @@ body {
   -ms-grid-rows: 50px 10px 1fr 10px 50px;
   background-color: #fff;
   color: #444;
+}
+
+.box {
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 150%;
 }
 
 .header {
@@ -68,6 +75,7 @@ body {
   -ms-grid-row: 3;
   grid-column: 2;
   grid-row: 3;
+  column-count: 2;
 }
 
 .footer {
@@ -77,37 +85,24 @@ body {
   grid-column: 1/-1;
   grid-row: 5;
 }
-
 /* END CSS-GRID */
 
-.box {
-  background-color: #444;
-  color: #fff;
-  border-radius: 5px;
-  padding: 20px;
-  font-size: 150%;
-}
-
-.header .nav {
-  display: flex;
-}
-
-.header .nav > li a, a:hover, a:active, a:visited { 
+.nav > li a, a:hover, a:active, a:visited { 
   font-size: 100%;
   color: white;
-  text-decoration: none;
 }
 
 .nav > li:nth-child(n+2):nth-last-child(n+2) {
    margin-left: 10px;
 }
 
-.nav > li:last-child() {
+.nav > li:nth-child(3) {
    margin-left: auto;
 }
 
 .section p {
   font-size: 62.5%;
+  display: inline-block;
 }
 
 .image { 
