@@ -72,12 +72,8 @@ p {
   /*font-size: 65%;*/
 }
 
-.img,  {
-	outline: 0;
-}
-
 .menu {
-	display: flex;
+  display: flex;
 }
 
 .menu > li a, a:hover, a:active, a:visited { 
@@ -93,6 +89,33 @@ p {
 .menu > li:nth-child(3) {
    margin-left: auto;
 }
+
+.image {
+  padding: 10px 0;
+}
+
+.owl  {
+  outline: 0;
+  max-width: 100%;
+  height: auto;
+}
+
+#owl2 {
+  max-width: 100%;
+  height: 400px;
+  background-image: url("../img/owl.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden; 
+}
+  
+.caption {
+  background-color: white;
+  color: black;
+  padding: 2px;
+}
+
+
 
 
 /* medium */
@@ -180,6 +203,14 @@ p {
   	-webkit-column-count: 2; /* Chrome, Safari, Opera */
   	-moz-column-count: 2; /* Firefox */
   	column-count: 2;
+
+    column-fill: balance;
+    -moz-column-fill: balance;
+    -webkit-column-fill: balance;
+/*
+    -webkit-column-gap: 40px; 
+    -moz-column-gap: 40px; 
+    column-gap: 40px;*/
   }
 
   .menu > li a, a:hover, a:active, a:visited { 

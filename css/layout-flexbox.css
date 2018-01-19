@@ -46,6 +46,10 @@ body {
   color: #444;
 }
 
+.container {
+  display: flex; /* or inline-flex */
+}
+
 .box {
   background-color: #444;
   color: #fff;
