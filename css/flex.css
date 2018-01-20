@@ -34,15 +34,23 @@ table {
 /* END HTML RESET*/
 
 /* mobile first */
+
+* {
+    color: black;
+}
+
 body {
-  margin: 10px;
   font-size:16px;
+  font-family: "Ariel", Georgia, Serif;
+  color: black;
+  /*background: linear-gradient(yellow, orange);*/
 }
 
 h1 {
   /*font-size: 5.9vw;*/
   font-size: 1em;
   line-height: 1;
+  color: black;
 } 
 
 h2 {
@@ -50,26 +58,86 @@ h2 {
 }
 
 p {
-  font-size: 0.8em;
+  font-size: 0.75rem;
   line-height: 1;
+  color: black;
 }
-
 
 .flex {
   display: flex;
   flex-direction: column;
+  color: #fff;
+  padding: 0px;
+}
+
+.topnav {
+  padding: 10px 1rem 10px 1rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+  .banner {
+      height: 30px;
+      background: linear-gradient(to bottom, #d08722 0%, #d08722 50%,#000000 50%, #feab29 50%, #feab29 100%);
+      border-top: 1px solid #696969;
+  }
+
+.image, .tagline, .search {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+  font-family: "Ariel", Georgia, Serif;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+}
+.options li {
+    display: flex;
+    margin-left: auto;
+    padding: 0 5px 0 5px;
+}
+
+.search i {
+  padding: 5px;
+}
+
+.logo img {
+  height:40px;
+  width: auto;
+}
+
+input {
+    padding: 5px 2px;
+    border-radius: 4px;
+    margin: 5px 0 5px 0;
 }
 
 .box {
-  background-color: #444;
+  /*background-color: #444;*/
   color: #fff;
-  border-radius: 5px;
+ /* border-radius: 5px;*/
   padding: 20px;
-  margin: 10px;
+/*  margin: 10px; */
 }
+
+/*.header {
+  background: linear-gradient(lightblue, darkblue);
+}
+*/
+
+.nav{ 
+  background-color: transparent;
+  padding: 5px 20px 5px 20px;
+ }
 
 .section {
   /*font-size: 65%;*/
+  border-bottom: 1px black solid;
 }
 
 .menu {
@@ -77,8 +145,9 @@ p {
 }
 
 .menu > li a, a:hover, a:active, a:visited { 
-  font-size: 1.5em;
-  color: white;
+  font-size: 1em;
+  text-transform: uppercase;
+  color: #696969;
   text-decoration: none;
 }
 
@@ -113,21 +182,30 @@ p {
   background-color: white;
   color: black;
   padding: 2px;
+
 }
 
-
+.aside {
+  background-color: #696969;
+  margin: 10px;
+  border-radius: 5px;
+}
+.footer {
+  justify-content: center;
+  text-align: center;
+}
 
 
 /* medium */
 @media only screen and (min-width: 568px) {
  
 	body {
-	  margin: 30px;
+	
 	}
 
 	h1 {
 	  /*font-size: 5.9vw;*/
-	  font-size: 2em;
+	  font-size: 1em;
 	  line-height: 1;
 	} 
 
@@ -135,9 +213,21 @@ p {
 		font-size: 1em;
 	}
 
-  .flex {
+  .flex, .topnav {
     flex-direction: row;
     flex: 1;
+  }
+
+  .flex {
+    margin: 0px 10px 0 10px
+  }
+
+  .banner {
+      height: 100px;
+  }
+  
+  .tagline {
+    padding-left: 10px;
   }
 
   .content {
@@ -154,14 +244,44 @@ p {
   	column-count: 1;
   }
 
+  .nav {
+    border: 1px solid #696969;
+    background-color: #f8f7f6;
+  }
+
+  .topnav.image, .topnav.tagline {
+    justify-content: flex-start;
+    align-content: flex-start;
+    flex: 1;
+  }
+
+  .topnav div:nth-child(2) {
+    align-content: flex-end;
+    flex: 1;
+    margin-left: auto;
+  }
+
+  .logo img {
+    height:40px;
+    width: auto;
+  }
+
+  .options li {
+    display: inline-block;
+  }
+
   .menu > li a, a:hover, a:active, a:visited { 
-	font-size: 2.1em;
-    color: white;
+	  font-size: 1em;
+    color: #696969;
     text-decoration: none;
   }
 
   .menu > li:nth-child(n+2):nth-last-child(n+2) {
 	   margin-left: 20px;
+   }
+
+   .menu li:nth-child(n+1):nth-last-child(n+2):after {
+      content: ' | ';
    }
 }
 
@@ -169,13 +289,15 @@ p {
 @media only screen and (min-width: 1024px) {
 
 	body {
-	  margin: 40px;
+	   color: black;
 	}
 
 	h1 {
 	  /*font-size: 5.9vw;*/
-	  font-size: 3em;
+	  font-size: 1.8em;
 	  line-height: 1
+    font-weight: 700;
+    line-height: 24px;
 	} 
 
 	h2 {
@@ -185,10 +307,17 @@ p {
 	p {
 	  font-size: 1em;
 	}
-
   .flex {
+    margin: 0px 40px 0 40px
+  }
+
+  .flex, .topnav {
     flex-direction: row;
     flex: 1;
+  }
+
+  .banner {
+      height: 150px;
   }
 
   .content {
@@ -196,7 +325,28 @@ p {
   }
 
   .header, .aside {
-    flex: 0 0 6em;
+    flex: 0 0 10em;
+  }
+
+  .topnav.image, .topnav.tagline {
+    justify-content: flex-start;
+    align-content: flex-start;
+    flex: 1;
+  }
+
+  .topnav div:nth-child(2) {
+    align-content: flex-end;
+    flex: 1;
+    margin-left: auto;
+  }
+
+  .logo img {
+    height:40px;
+    width: auto;
+  }
+
+  .options li {
+    display: inline-block;
   }
 
   .section {
@@ -214,8 +364,8 @@ p {
   }
 
   .menu > li a, a:hover, a:active, a:visited { 
-	font-size: 3em;
-    color: white;
+	  font-size: 1em;
+    color: #696969;
     text-decoration: none;
   }
 
